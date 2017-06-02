@@ -1,2 +1,2 @@
 # TeeChart-for-.NET-CSharp-WPF-samples
-Assorted WPF examples
+Assorted TeeChart NET WPF examples
