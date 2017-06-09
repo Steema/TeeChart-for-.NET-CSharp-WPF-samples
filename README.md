@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-TeeChart-for-FireMonkey-applications-samples
-================================================
-
-Sample programs showing how to use TeeChart for FireMonkey applications.
-=======
 TeeChart-for-.NET-CSharp-WPF-samples
 ======================
 
@@ -18,4 +12,3 @@ We have a nice example [here](https://github.com/Steema/TeeChart-for-.NET-CSharp
 ### Author
 ------
 Abel
->>>>>>> b2fcbc0e9ceb3cb69948aa45de1d41fd83b9b5c4
