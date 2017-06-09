@@ -1,0 +1,67 @@
+﻿<metro:MetroWindow x:Class="SeriesRatings.MainWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                   xmlns:controls="clr-namespace:SeriesRatings.Controls"
+                   xmlns:teechart="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF"
+                   Title="Series Ratings" Height="800" Width="1280" GlowBrush="{DynamicResource AccentColorBrush}"
+                   Loaded="OnLoaded" MinWidth="640" MinHeight="480">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBox metro:TextBoxHelper.Watermark="Type a series name and press Enter..." Grid.Row="0" Grid.Column="0"
+                 KeyDown="OnSearchKeyDown" Margin="4" />
+
+        <ListView Name="SearchResultsList" Grid.Row="1" Grid.Column="0" SelectionChanged="OnSelectSeries">
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Poster" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Poster}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Title" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Title}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Year}" Width="70" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <ComboBox Name="SeasonSelector" Margin="0,4,4,4" SelectedIndex="0" Width="100"
+                      SelectionChanged="OnSelectSeason">
+                <ComboBoxItem Content="All Seasons" />
+            </ComboBox>
+            <CheckBox Content="Adjust ratings to max / min of series" Margin="0,4,4,4" Checked="OnAdjustMinMaxRatings"
+                      Unchecked="OnAdjustMinMaxRatings" />
+        </StackPanel>
+
+        <teechart:TChart Name="Chart" Grid.Column="1" Grid.Row="1" Scroll="OnScroll" Visibility="Hidden" />
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Data sourced from the OMDb API, omdbapi.com"
+                   HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="4" FontSize="9" />
+
+        <controls:LoadingSpinner x:Name="SearchLoadingSpinner" Grid.Column="0" Grid.Row="1" Width="50" Height="50"
+                                 Visibility="Hidden" />
+        <controls:LoadingSpinner x:Name="ChartLoadingSpinner" Grid.Column="1" Grid.Row="1" Visibility="Hidden" />
+    </Grid>
+</metro:MetroWindow>
