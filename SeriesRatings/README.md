@@ -1,4 +1,8 @@
-﻿TeeChart-for-.NET-CSharp-WPF-samples
+﻿<a href="https://www.steema.com/product/net">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_net.png">
+</a>
+
+TeeChart-for-.NET-CSharp-WPF-samples
 ==================
 
 Here we have a demo written with TeeChart for .NET and WPF that’s just a bit of fun to compare ratings for important television series, but which mainly serves as a nice example to show TeeChart being used in a WPF application.
