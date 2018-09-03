@@ -10,7 +10,7 @@ namespace SeriesRatings.Data
         public static async Task<T> RequestData<T>(IRestRequest request, CancellationToken cancellationToken)
             where T : class
         {
-            var client = new RestClient("http://www.omdbapi.com");
+            var client = new RestClient("http://www.omdbapi.com/?apikey=b9392336");
             var response = await client.ExecuteTaskAsync<T>(request, cancellationToken);
             return response.Data;
         }
