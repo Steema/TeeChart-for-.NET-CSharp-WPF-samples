@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlWPFDemo", "XamlWPFDemo.csproj", "{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{6E2C1A45-AF2B-48B1-9019-82CD3A97777E}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C481A4F9-F2C3-4E3B-96DB-E86507A0B465}
+	EndGlobalSection
+EndGlobal

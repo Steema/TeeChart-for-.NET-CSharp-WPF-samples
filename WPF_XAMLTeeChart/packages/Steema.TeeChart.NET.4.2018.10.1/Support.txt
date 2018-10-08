@@ -1,0 +1,20 @@
+--------------------------------------------------------
+How to get support:
+
+Non-customers
+
+- Submitting questions at Stack Overflow (http://stackoverflow.com/) 
+  with the "TeeChart" and product platform tags.
+- Non-customers have read-only access to the customer resources below.
+
+Customers
+
+- Submitting questions at our online forums
+  (https://www.steema.com/support/index.php).
+  Please note that customer forums are read-only for non-customers.
+- Document resources at http://www.teechart.net/reference/index.php.
+
+Latest version information posted at:
+
+- http://www.steema.com/versioninfo/net
+--------------------------------------------------------
