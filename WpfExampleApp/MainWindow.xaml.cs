@@ -27,9 +27,16 @@ namespace WpfExampleApp
 		private Steema.TeeChart.WPF.Styles.FastLine ExFastLine1;
 		private Steema.TeeChart.WPF.Styles.FastLine ExFastLine2;
 
+		System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			btnFill.Click += btnFill_ClickAsync;
+			btnScroll.Click += btnScroll_Click;
+
+			dispatcherTimer.Tick += dispatcherTimer_Tick;
 
 			modifyChart();
 
@@ -37,7 +44,6 @@ namespace WpfExampleApp
 
 		public void modifyChart()
 		{
-			btn1.Click += Btn1_ClickAsync;
 
 			Chart.Visibility = Visibility.Visible;
 
@@ -81,12 +87,33 @@ namespace WpfExampleApp
 
 		}
 
-		private void ChBx1_Checked(object sender, RoutedEventArgs e)
+		bool isScrolling = false;
+
+		private void btnScroll_Click(object sender, RoutedEventArgs e)
 		{
-			throw new NotImplementedException();
+			if (!isScrolling)
+			{
+				btnScroll.Content = "Stop";
+				isScrolling = true;
+				btnFill.IsEnabled = false;
+				dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 50);
+				dispatcherTimer.Start();
+			}
+			else
+			{
+				btnScroll.Content = "Scroller";
+				isScrolling = false;
+				btnFill.IsEnabled = true;
+				dispatcherTimer.Stop();
+			}
 		}
 
-		private async void Btn1_ClickAsync(object sender, RoutedEventArgs e)
+		private void dispatcherTimer_Tick(object sender, EventArgs e)
+		{
+			LoadScrollData();
+		}
+
+		private async void btnFill_ClickAsync(object sender, RoutedEventArgs e)
 		{
 			LoadData();
 		}
@@ -104,12 +131,13 @@ namespace WpfExampleApp
 
 		private void LoadData()
 		{
-			ExFastLine1.Clear();
-			ExFastLine2.Clear();
+			//ExFastLine1.Clear();
+			//ExFastLine2.Clear();
 
-			int valueCount = 5000;
+			int valueCount = 10000;
+			int firstPoint = ExFastLine1.Count;
 
-			for (int i = 0; i < valueCount; i++)
+			for (int i = firstPoint; i < firstPoint+valueCount; i++)
 			{
 				if (i > 0)
 				{
@@ -118,10 +146,45 @@ namespace WpfExampleApp
 				}
 				else
 				{
-					ExFastLine1.Add(i, rand.Next(100));
-					ExFastLine2.Add(i, rand.Next(100));
+					ExFastLine1.Add(i, rand.Next(5000));
+					ExFastLine2.Add(i, rand.Next(5000));
 				}
 			}
+		}
+
+		private void LoadScrollData()
+		{
+			//ExFastLine1.Clear();
+			//ExFastLine2.Clear();
+
+			int valueCount = 10;
+			int firstPoint = (ExFastLine1.Count > 0) ? (int)ExFastLine1.XValues.Last : 0;
+
+			for (int i = firstPoint; i < firstPoint + valueCount; i++)
+			{
+				if (i > 0)
+				{
+					ExFastLine1.Add(i, ExFastLine1.YValues.Last + getValue(ExFastLine1.YValues.Last));
+					ExFastLine2.Add(i, ExFastLine2.YValues.Last + getValue(ExFastLine2.YValues.Last));
+				}
+				else
+				{
+					ExFastLine1.Add(i, rand.Next(5000));
+					ExFastLine2.Add(i, rand.Next(5000));
+				}
+			}
+
+			if (ExFastLine1.Count>500)
+			{
+				Chart.Axes.Bottom.SetMinMax(ExFastLine1.XValues.Last - 500, ExFastLine1.XValues.Last);
+			}
+
+			if ((ExFastLine1.Count > 2000) && (ExFastLine1.Count % 500 == 0))
+			{
+				ExFastLine1.Delete(0, 200);
+				ExFastLine2.Delete(0, 200);
+			}
+
 		}
 	}
 }

@@ -18,6 +18,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <teechart:TChart Name="Chart" Grid.Row="1" Grid.ColumnSpan="3" Margin="128,0,26,0" />
-        <Button Content="FillData" Name="btn1" HorizontalAlignment="Left" Height="23" Margin="22,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="69"/>
+        <Button Content="FillData" Name="btnFill" HorizontalAlignment="Left" Height="23" Margin="22,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Scrolling" Name="btnScroll" HorizontalAlignment="Left" Margin="22,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
