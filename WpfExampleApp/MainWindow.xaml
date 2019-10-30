@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfExampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExampleApp"
+        xmlns:teechart="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="625*" />
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <teechart:TChart Name="Chart" Grid.Row="1" Grid.ColumnSpan="3" Margin="128,0,26,0" />
+        <Button Content="FillData" Name="btn1" HorizontalAlignment="Left" Height="23" Margin="22,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="69"/>
+    </Grid>
+</Window>
