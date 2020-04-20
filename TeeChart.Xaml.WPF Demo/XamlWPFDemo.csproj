@@ -39,8 +39,8 @@
     <ApplicationIcon>XAMLDemoIcon16.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>packages\CommonServiceLocator.2.0.2\lib\net40\CommonServiceLocator.dll</HintPath>
+    <Reference Include="CommonServiceLocator, Version=2.0.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\CommonServiceLocator.2.0.5\lib\net40\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=0e453835af4ee6ce, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net40\GalaSoft.MvvmLight.dll</HintPath>
@@ -48,11 +48,12 @@
     <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=f46ff315b1088208, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net40\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>packages\AvalonEdit.6.0.1\lib\net40\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -64,11 +65,14 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2018.10.1, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2018.10.1\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2018.10.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2018.10.1\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
