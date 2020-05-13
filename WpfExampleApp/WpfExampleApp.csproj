@@ -46,14 +46,14 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2020.5.12, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.5.12\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2020.5.12, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.5.12\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2020.4.6, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2020.4.6\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2020.5.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2020.5.12\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

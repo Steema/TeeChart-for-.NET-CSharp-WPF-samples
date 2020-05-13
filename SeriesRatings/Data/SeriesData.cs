@@ -81,7 +81,7 @@ namespace SeriesRatings.Data
             {
                 var results = new List<SearchSeriesData>();
                 var request = new RestRequest("/", Method.GET);
-                var idParameter = new Parameter {Name = "i", Type = ParameterType.GetOrPost};
+                var idParameter = new Parameter("i", null, ParameterType.GetOrPost);
                 request.AddParameter(idParameter);
 
                 foreach (var imdbId in DefaultSeries)
