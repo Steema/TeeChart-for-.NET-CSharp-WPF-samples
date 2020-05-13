@@ -14,16 +14,19 @@
 				<teechart:Title Text="TeeChart XAML content" />
 			</teechart:TChart.Header>
 			<series:Bar>
-				<series:SeriesData Y="10" />
-				<series:SeriesData Y="20" />
-				<series:SeriesData Y="30" />
-				<series:SeriesData Y="40" />
-				<series:SeriesData Y="50" />
-				<series:SeriesData Y="60" />
+                <series:SeriesData Y="1000000" />
+                <series:SeriesData Y="200000" />
+                <series:SeriesData Y="30000" />
+                <series:SeriesData Y="4000" />
+                <series:SeriesData Y="50000" />
+                <series:SeriesData Y="600000" />
 			</series:Bar>
 			<teechart:TChart.Legend>
 				<teechart:Legend Visible="False" />
 			</teechart:TChart.Legend>
+            <teechart:TChart.LeftAxis>
+                <teechart:Axis Visible="True" AutomaticMinimum="False" Minimum="10" Logarithmic="True"/>
+            </teechart:TChart.LeftAxis>            
 		</teechart:TChart>
 	</Grid>
 </Window>
