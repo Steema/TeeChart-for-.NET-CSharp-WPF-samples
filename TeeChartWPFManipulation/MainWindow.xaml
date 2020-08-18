@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeeChartWPFManipulation"
+        xmlns:WPF="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF" x:Class="TeeChartWPFManipulation.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+  <Grid>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="150" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <WPF:TChart x:Name="TChart1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    <GroupBox x:Name="groupBox" Header="Action" HorizontalAlignment="Left" Height="101" Margin="22,145,0,0" VerticalAlignment="Top" Width="100">
+      <Grid>
+        <RadioButton x:Name="rbScroll" Content="Scroll" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Click="rbScroll_Click" IsChecked="True"/>
+        <RadioButton x:Name="rbZoom" Content="Zoom" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" Click="rbZoom_Click"/>
+      </Grid>
+    </GroupBox>
+  </Grid>
+</Window>

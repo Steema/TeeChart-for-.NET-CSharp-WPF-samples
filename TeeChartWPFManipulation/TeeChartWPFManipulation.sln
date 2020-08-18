@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChartWPFManipulation", "TeeChartWPFManipulation.csproj", "{B5774646-C71F-4EA1-AA80-555EE1255B7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19BF8E13-F281-4AAB-90AC-CA3A661CAF76}
+	EndGlobalSection
+EndGlobal
