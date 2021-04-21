@@ -8,25 +8,42 @@
 				xmlns:series="clr-namespace:TeeChart.Xaml.WPF.Series;assembly=TeeChart.Xaml.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="418.704" Width="767.407">
-    <Grid>
-		<teechart:TChart>
-			<teechart:TChart.Header>
-				<teechart:Title Text="TeeChart XAML content" />
-			</teechart:TChart.Header>
-			<series:Bar>
-                <series:SeriesData Y="1000000" />
-                <series:SeriesData Y="200000" />
-                <series:SeriesData Y="30000" />
-                <series:SeriesData Y="4000" />
-                <series:SeriesData Y="50000" />
-                <series:SeriesData Y="600000" />
-			</series:Bar>
-			<teechart:TChart.Legend>
-				<teechart:Legend Visible="False" />
-			</teechart:TChart.Legend>
-            <teechart:TChart.LeftAxis>
-                <teechart:Axis Visible="True" AutomaticMinimum="False" Minimum="10" Logarithmic="True"/>
-            </teechart:TChart.LeftAxis>            
-		</teechart:TChart>
-	</Grid>
+  <TabControl>
+    <TabItem Header="Bar Series">
+      <Grid>
+        <teechart:TChart>
+          <teechart:TChart.Header>
+            <teechart:Title Text="TeeChart XAML content" />
+          </teechart:TChart.Header>
+          <series:Bar BarStyle="Arrow">
+            <series:SeriesData Y="1000000" />
+            <series:SeriesData Y="200000" />
+            <series:SeriesData Y="30000" />
+            <series:SeriesData Y="4000" />
+            <series:SeriesData Y="50000" />
+            <series:SeriesData Y="600000" />
+          </series:Bar>
+          <teechart:TChart.Legend>
+            <teechart:Legend Visible="False" />
+          </teechart:TChart.Legend>
+          <teechart:TChart.LeftAxis>
+            <teechart:Axis Visible="True" AutomaticMinimum="False" Minimum="10" Logarithmic="True"/>
+          </teechart:TChart.LeftAxis>
+        </teechart:TChart>
+      </Grid>
+    </TabItem>
+    <TabItem Header="ColorGrid Series">
+      <teechart:TChart>
+        <teechart:TChart.Header>
+          <teechart:Title Text="ColorGrid Series XAML content" />
+        </teechart:TChart.Header>
+        <series:ColorGrid UsePalette="True" UseColorRange="False" PaletteStyle="Rainbow">
+          <series:Series3DData X="1" Y="1" Z="1" />
+          <series:Series3DData X="1" Y="2" Z="2" />
+          <series:Series3DData X="2" Y="2" Z="1" />
+          <series:Series3DData  X="2" Y="4" Z="2" />
+        </series:ColorGrid>
+      </teechart:TChart>
+    </TabItem>
+  </TabControl>
 </Window>
