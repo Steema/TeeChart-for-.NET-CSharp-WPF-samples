@@ -4,7 +4,7 @@
                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                    xmlns:controls="clr-namespace:SeriesRatings.Controls"
                    xmlns:teechart="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF"
-                   Title="Series Ratings" Height="800" Width="1280" GlowBrush="{DynamicResource AccentColorBrush}"
+                   Title="Series Ratings" Height="800" Width="1280" GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                    Loaded="OnLoaded" MinWidth="640" MinHeight="480">
     <Grid>
         <Grid.ColumnDefinitions>
