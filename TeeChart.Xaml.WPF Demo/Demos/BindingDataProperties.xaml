@@ -11,7 +11,10 @@
     <teechart:TChart.Legend>
       <teechart:Legend Visible="False" />
     </teechart:TChart.Legend>
-    <series:Bar ItemsSource="{Binding Data}" />
+    <teechart:TChart.BottomAxis>
+      <teechart:Axis Visible="True" Increment="0.5"/>
+    </teechart:TChart.BottomAxis>
+      <series:ColorGrid ItemsSource="{Binding Data}" UseColorRange="False" UsePalette="True"/>
   </teechart:TChart>
 
   <!-- TODO: Set min / max to axis -->
