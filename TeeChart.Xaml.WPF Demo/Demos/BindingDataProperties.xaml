@@ -7,7 +7,7 @@
              xmlns:series="clr-namespace:TeeChart.Xaml.WPF.Series;assembly=TeeChart.Xaml.WPF"
              mc:Ignorable="d"
              DataContext="{Binding BindingDataPropertiesViewModel, Source={StaticResource Locator}}">
-  <teechart:TChart>
+  <teechart:TChart Name="tChart1">
     <teechart:TChart.Legend>
       <teechart:Legend Visible="False" />
     </teechart:TChart.Legend>
