@@ -12,10 +12,23 @@
     <TabItem Header="Bar Series">
       <Grid>
         <teechart:TChart Name="tChart1">
+          <teechart:TChart.Zoom>
+            <teechart:Zoom Direction="Horizontal" MouseButton="Right" StrokeThickness="3">
+              <teechart:Zoom.Fill>
+                <SolidColorBrush Color="Red" Opacity="0.5" />
+              </teechart:Zoom.Fill>
+              <teechart:Zoom.Stroke>
+                <SolidColorBrush Color="BlueViolet" Opacity="0.5" />
+              </teechart:Zoom.Stroke>
+            </teechart:Zoom>
+          </teechart:TChart.Zoom>
+          <teechart:TChart.Scroll>
+            <teechart:Scroll MouseButton="Left" Allow="Horizontal"/>
+          </teechart:TChart.Scroll>
           <teechart:TChart.Panel>
             <teechart:Panel StrokeThickness="13.2">
               <teechart:Panel.Fill>
-                <SolidColorBrush Color="Yellow" Opacity="0.5" />
+                <SolidColorBrush Color="LightYellow" Opacity="0.5" />
               </teechart:Panel.Fill>
               <teechart:Panel.Stroke>
                 <SolidColorBrush Color="Aquamarine" Opacity="0.5" />
@@ -79,11 +92,11 @@
             </teechart:Legend>
           </teechart:TChart.Legend>
           <teechart:TChart.LeftAxis>
-            <teechart:Axis Visible="True" AutomaticMinimum="False" Minimum="10" Logarithmic="True" StrokeThickness="4" StrokeDashArray="1,1">
+            <teechart:LeftAxis Visible="True" AutomaticMinimum="False" Minimum="10" Logarithmic="True" StrokeThickness="4" StrokeDashArray="1,1">
               <teechart:Axis.Stroke>
                 <SolidColorBrush Color="DarkCyan" Opacity="0.8" />
               </teechart:Axis.Stroke>
-            </teechart:Axis>
+            </teechart:LeftAxis>
           </teechart:TChart.LeftAxis>
         </teechart:TChart>
       </Grid>
