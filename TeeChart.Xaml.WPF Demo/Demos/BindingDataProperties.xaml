@@ -7,11 +7,18 @@
              xmlns:series="clr-namespace:TeeChart.Xaml.WPF.Series;assembly=TeeChart.Xaml.WPF"
              mc:Ignorable="d"
              DataContext="{Binding BindingDataPropertiesViewModel, Source={StaticResource Locator}}">
-  <teechart:TChart>
+  <teechart:TChart Name="tChart1">
     <teechart:TChart.Legend>
       <teechart:Legend Visible="False" />
     </teechart:TChart.Legend>
-    <series:Bar ItemsSource="{Binding Data}" />
+    <teechart:TChart.BottomAxis>
+      <teechart:BottomAxis Visible="True" Increment="0.5"/>
+    </teechart:TChart.BottomAxis>
+    <series:ColorGrid ItemsSource="{Binding Data}" UseColorRange="False" UsePalette="True" StrokeThickness="3">
+      <series:ColorGrid.Stroke>
+        <SolidColorBrush Color="White" Opacity="1.0" />
+      </series:ColorGrid.Stroke>
+    </series:ColorGrid>
   </teechart:TChart>
 
   <!-- TODO: Set min / max to axis -->

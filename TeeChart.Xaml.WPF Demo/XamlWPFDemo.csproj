@@ -48,8 +48,8 @@
     <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=f46ff315b1088208, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net40\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.1.20, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>..\packages\AvalonEdit.6.1.1\lib\net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.2.30, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\..\TeeChartPRO_NETFramework4\packages\AvalonEdit.6.1.2.30\lib\net40\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -64,15 +64,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="TeeChart, Version=4.2021.4.21, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.4.21\lib\net40\TeeChart.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2021.4.21, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.4.21\lib\net40\TeeChart.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2021.4.21, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.4.21\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -186,6 +177,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="XAMLDemoIcon16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\TCROOT\TeeChartForNET\Version 4\Sources\TeeChart.WPF\TeeChart.WPF40.csproj">
+      <Project>{0406835f-8f5a-4478-9b07-7c1a990f06f8}</Project>
+      <Name>TeeChart.WPF40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\TCROOT\TeeChartForNET\Version 4\Sources\TeeChart.Xaml.WPF\TeeChart.Xaml.WPF40.csproj">
+      <Project>{e6e13133-2b75-4183-850d-8e00a11b36eb}</Project>
+      <Name>TeeChart.Xaml.WPF40</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
