@@ -12,9 +12,13 @@
       <teechart:Legend Visible="False" />
     </teechart:TChart.Legend>
     <teechart:TChart.BottomAxis>
-      <teechart:Axis Visible="True" Increment="0.5"/>
+      <teechart:BottomAxis Visible="True" Increment="0.5"/>
     </teechart:TChart.BottomAxis>
-      <series:ColorGrid ItemsSource="{Binding Data}" UseColorRange="False" UsePalette="True"/>
+    <series:ColorGrid ItemsSource="{Binding Data}" UseColorRange="False" UsePalette="True" StrokeThickness="3">
+      <series:ColorGrid.Stroke>
+        <SolidColorBrush Color="White" Opacity="1.0" />
+      </series:ColorGrid.Stroke>
+    </series:ColorGrid>
   </teechart:TChart>
 
   <!-- TODO: Set min / max to axis -->

@@ -1,20 +1,16 @@
-﻿using System.Linq;
-using System.Windows;
-using System.Windows.Media;
-
-namespace XamlWPFDemo.Demos
+﻿namespace XamlWPFDemo.Demos
 {
-    public partial class BindingDataProperties
+  public partial class BindingDataProperties
+  {
+    public BindingDataProperties()
     {
-        public BindingDataProperties()
-        {
-            InitializeComponent();
+      InitializeComponent();
 
-            var internalChart = LogicalTreeHelper.GetChildren(tChart1).OfType<Steema.TeeChart.WPF.TChart>().First();
+      //var internalChart = LogicalTreeHelper.GetChildren(tChart1).OfType<Steema.TeeChart.WPF.TChart>().First();
 
-            var internalColorGrid = (Steema.TeeChart.WPF.Styles.ColorGrid)internalChart[0];
-            internalColorGrid.Pen.Color = Colors.White;
-            internalColorGrid.Pen.Width = 2;
-        }
+      //var internalColorGrid = (Steema.TeeChart.Styles.ColorGrid)internalChart[0];
+      //internalColorGrid.Pen.Color = System.Drawing.Color.White;
+      //internalColorGrid.Pen.Width = 2;
     }
+  }
 }
